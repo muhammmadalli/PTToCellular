@@ -80,7 +80,7 @@ in production (unlike the shared public demo).
 
 - **Cost:** 2× the equivalent hosted rate · **Minimum:** 1 month
 - *Example:* evaluating with 22 users (Business tier = €330/mo) → **€660 for one month**.
-- ✅ **100% credited toward the €2,800 Enterprise License** if you proceed — making the
+- ✅ **100% credited toward the €2,800 Enterprise License** if you proceed, making the
   trial effectively free for committed customers.
 
 📩 To request a private trial or discuss your deployment: **info@evoptt.com**
@@ -89,14 +89,14 @@ in production (unlike the shared public demo).
 
 ## Why teams pick EVO PTT
 
-- **Superior voice compression** — see the [data-consumption benchmark vs. competitors](https://www.dropbox.com/s/39qpqhx88bqj5nl/EVO%20PTT%20Benchmark.pdf?dl=0).
+- **Superior voice compression** — See the [data-consumption benchmark vs. competitors](https://www.dropbox.com/s/39qpqhx88bqj5nl/EVO%20PTT%20Benchmark.pdf?dl=0).
 - **Hardware PTT button support** out of the box on F22 / F22+ / F25 devices.
-- **Per-company Docker isolation** — strict tenant separation by design.
+- **Per-company Docker isolation** — Strict tenant separation by design.
 - **Real-time location** on dispatcher map and teammate apps.
-- **Private deployment options** — your premises, your cloud, or our AWS infrastructure.
-- **No vendor lock-in path** — buy the source and rebrand if you ever want to.
-- **Network-resilient** — auto-reconnect, network-type switching (Data ↔ WiFi without dropping), works on 2G/EDGE through 5G.
-- **Background & screen-off operation**, start-on-boot, auto-login — built for the realities of fieldwork.
+- **Private deployment options** — Your premises, your cloud, or our AWS infrastructure.
+- **No vendor lock-in path** — Buy the source and rebrand if you ever want to.
+- **Network-resilient** — Auto-reconnect, network-type switching (Data ↔ WiFi without dropping), works on 2G/EDGE through 5G.
+- **Background & screen-off operation**, start-on-boot, auto-login — Built for the realities of fieldwork.
 
 ---
 
@@ -147,4 +147,4 @@ Also available on **Samsung Galaxy Store** and **Huawei AppGallery**.
 > EVO PTT is a commercial product. This repository showcases its features, screenshots
 > and documentation. Source code access is included with the Enterprise License.
 
-<sub>Any communication through the public demo channel is shared and visible to other evaluators — please don't put sensitive information in it.</sub>
+<sub>Any communication through the public demo channel is shared and visible to other evaluators. Please don't use any sensitive information in it.</sub>
