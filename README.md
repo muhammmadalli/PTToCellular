@@ -1,122 +1,150 @@
-<h1 align="center">EVO PTT | Complete Walkie Talkie Solution for Modern Businesses</h1>
-<br/>
+<h1 align="center">EVO PTT | Enterprise Push-to-Talk for Modern Businesses</h1>
 
-![Alt text](https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/EVO-PTT-feature-graphic.png "EVO PTT - The Evolution in PTT communication")
-<br/>
-<br/>
-
-Designed with Businesses in mind, EVO PTT is a complete Walkie Talkie (Push To Talk) solution that provides:
-
-► Safe communication of users and supervisors with the EVO PTT Android App.
-<br/>
-► Easy administration and management of users and companies with the EVO PTT Web Panel.
-<br/>
-<br/>
-
-Demo testing
----------------------
-• To try the EVO PTT Android App as a User for free, open the Android Application, accept the required permissions and tap on the DEMO LOGIN button! 
-<br/>
-• To try the EVO PTT Web Panel as a Company Manager for free, go to https://evoptt.com and click on the DEMO LOGIN button!
-<br/>
-<br/>
-
-Main Features
----------------------
-- Easy to understand and use UI.
-- Fast and low latency real time voice communication,
-- Seamless geolocation monitoring of EVO PTT Users location.
-- Superior voice compression CODECs and low data consumption.
-- High security voice encryption.
-- Works over any network condition (2G, 3G, 4G or Wifi) with Network Type Switching mode to switch seamlessly between Data and WiFi without disconnecting.
-- Native integration with Android Walkie Talkie devices (F22, F22+, F25 and more).
-- Ability to work with screen off in Android Walkie Talkie devices.
-- SOS button function with location reporting.
-- Real time location tracking of Mobile Users to the EVO PTT Android App and the EVO PTT Web Panel.
-- Easy User management through the EVO PTT Web Panel.
-- Mobile Users log in on a per-company basis for better user isolation and security (using secure docker containers).
-- Start on boot, Auto-login, Remember Login Credentials and Auto-reconnect when Internet connection is lost.
-- Stay Awake mode to keep the screen on.
-- EVO PTT stays active in background so you can use other apps while listening other Users in real time.
-- Compatible with the latest version of Android 10, Android Studio IDE and Gradle tools.
-- Ideal for security companies, cleaning companies, taxi drivers, police or fire departments, lorry drivers and more!
-- Competitive subscription and one off pay pricing plans!
-- Ability for source code purchase and app rebranding!
-<br/>
-
-EVO PTT Android App Screenshots
--------------------------------
-![Alt text](https://play-lh.googleusercontent.com/Cslsv82yPZBkKXSQAGdtVgWt3A_bPlufh96eLG3GpEdDKFAXru0ouNvVuQ4IgMy89hoi=w720-h380-rw "Login Screen") 
-![Alt text](https://play-lh.googleusercontent.com/DT87zUtjqABcRVc6QOhFyZGDQuahWbQ208wOytS7ZsIMjvkkISURclIHLrNCPVG3Qg=w720-h380-rw "Server Screen") 
-![Alt text](https://play-lh.googleusercontent.com/5NeEB5Nhk3y6W-zaNyNHrC_RcNXQxr467ZjuX0jzajno5gXb0-g2UGXuiK9SunxkKJ0=w720-h380-rw "Chat Screen") 
-![Alt text](https://play-lh.googleusercontent.com/gy2OL0GOau1zLrV7mMqNfJgz9dAv1KOTXNLF65VagdyFJe3uoOcjpz7fb5extm0LZ0E=w720-h380-rw "MapView Screen")
-<br/>
-<br/>
-
-EVO PTT Web Panel Screenshots
--------------------------------
-<p float="left">
-<img src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/webpanel1.png" width="400" title="Login Page">
-<img src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/webpanel2.png" width="400" title="Server Status Page">
-<img src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/webpanel3.png" width="400" title="Companies Page">
-<img src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/webpanel4.png" width="400" title="Managers Page">
-<img src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/webpanel5.png" width="400" title="Users Page">
-<img src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/webpanel6.png" width="400" title="Users Location Page">
-</p>
-<br/>
-<br/>
-
-Downloads
----------------------
-
-<strong>EVO PTT is available on Google Play, Samsung Galaxy Store and Huawei AppGallery</strong>
-<br /><br />
-<p float="left">
-<a href="https://play.google.com/store/apps/details?id=com.theofilos.chamalis.evoptt">
-  <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
-</a>
-<img alt="Available on Samsung Galaxy Store" src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/samsung.png" style="vertical-align:center;" height="45"/>
-<img alt="Explore it on Huawei AppGallery" src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/huawei.png" height="45"/>
+<p align="center">
+  <a href="https://evoptt.com"><b>evoptt.com</b></a> ·
+  <a href="https://evoptt.com">Try the free demo</a> ·
+  <a href="mailto:info@evoptt.com">Request a private trial</a>
 </p>
 
-<br/>
+![EVO PTT — The Evolution in PTT communication](https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/EVO-PTT-feature-graphic.png)
 
-\*  Any communication through the demo channel is public. <br/>
-*\* For a data consumption comparison of EVO PTT with our competitors click <a target="_blank" href="https://www.dropbox.com/s/39qpqhx88bqj5nl/EVO%20PTT%20Benchmark.pdf?dl=0"> HERE</a>.
+EVO PTT is a complete, secure VoIP push-to-talk system for organisations that need
+reliable team communication in the field. It replaces analogue radios and consumer
+walkie-talkie apps with a private, encrypted, low-latency platform deployed on
+your infrastructure or hosted by us on AWS.
 
-<br/>
+- 🔐 **Per-company Docker isolation** — Every customer runs in its own container.
+- 📡 **Ultra-low latency voice** with superior compression. — Works on 2G/EDGE/3G/4G/5G and WiFi.
+- 📍 **Real-time GPS tracking & SOS alerts** to dispatcher and teammates.
+- 🎙️ **Native hardware PTT button support** for F22, F22+, F25 and similar devices.
+- 🖥️ **Multi-platform** — Android end-user app + Web dashboard for managers.
+- 🏷️ **White-label & full source** available under the one-time Enterprise License.
 
-Partnership, Services & Pricing
------------------------
-Our services include plans with customized and private (per customer) servers based on the amount of users as well as the ability to buy the full source (front end and back end) alongside with redistribution and rebranding rights. If you are interested in using EVO PTT or a rebranded version of it based on your company's brand & logo, feel free to contact us at <b>info@evoptt.com</b> for more information.
-<br/>
-<br/>
-<br/>
+---
 
+## Who it's for
 
-Building on GNU/Linux
----------------------
+Security companies · Transportation & logistics · Field operations · Emergency services
+· Construction sites · Facility management · Event management.
 
-Make sure you have the following installed on your linux machine: Android Studio, Oracle java,
-ant, awk, make, git, the Android SDK and the Android NDK. Then fork or download the original Jumble libraries and execute the commands below:
+## What's in the box
 
-    git submodule update --init --recursive
-    ndk-build -C libraries/Jumble/src/main/jni/
-    ./gradlew assembleDebug
+| Component | For whom | Purpose |
+|---|---|---|
+| **Android app** | Field workers / End users | Voice PTT, GPS, SOS, hardware PTT button |
+| **Web dashboard** | Company managers | Users, companies, live map, server status |
+| **REST API** | App & Dashboard communication | Secure data access |
+| **Voice server** | App & End user communication | Crystal-clear, low-latency audio |
 
-This is necessary in order to download the libraries that the initial application uses.
-Keep in mind that throughout the proccess you should use chmod command on the whole project file
-to give it the right permissions. Finally, download the files of my project and overwrite the old
-ones. If you encounter any problem throughout the procedure feel free to contact 
-.
+---
 
+## Try it now | Free public demo
 
-Contributing	
-============
+No signup, no commitment. (Shared sandbox, please don't put sensitive data in it.)
 
-Coding
-------
+- 📱 **Android:** [Get it on Google Play](https://play.google.com/store/apps/details?id=com.theofilos.chamalis.evoptt) → tap **ENTER FREE PUBLIC DEMO**
+- 🖥️ **Web dashboard:** [evoptt.com](https://evoptt.com) → **Public Demo**
 
-Standard FOSS project procedure applies; fork and submit a PR or just email us at info@evoptt.com !
+> Want an isolated environment to evaluate with your real team?
+> [Request a **Private Trial**](mailto:info@evoptt.com?subject=EVO%20PTT%20Private%20Trial) — see pricing below.
 
-Please use Transifex for translations, not pull requests.
+---
+
+## Pricing
+
+### 🛒 Hosted subscription | We host & operate, monthly billing, cancel anytime
+
+All hosted plans include: private hosted company server, web dashboard, real-time GPS
+& SOS, encrypted voice & data, per-company Docker isolation.
+
+| Plan | Users | Price | Extras |
+|---|---|---|---|
+| **Team** | up to 10 | **€165 / month** | Standard email support, one-time setup assistance |
+| **Business** ⭐ *most popular* | up to 50 | **€330 / month** | Free installation, custom rebranding, priority email support |
+| **Scale** | up to 250 | **€510 / month** | Free installation & rebranding, dedicated onboarding, priority support (8×5) |
+
+### 💎 Enterprise License | one-time fee, own it forever
+
+**€2,800 one-time payment** with no recurring fees, no per-user costs, ever.
+
+- Unlimited users
+- Full source code access (Android app + web + backend)
+- Commercial license & white-label / rebranding rights
+- Self-host on your infrastructure or on-prem
+- Free installation, onboarding and initial support package included
+
+### 🧪 Private Trial
+
+A dedicated, isolated company on its own server — the exact environment you'd run
+in production (unlike the shared public demo).
+
+- **Cost:** 2× the equivalent hosted rate · **Minimum:** 1 month
+- *Example:* evaluating with 22 users (Business tier = €330/mo) → **€660 for one month**.
+- ✅ **100% credited toward the €2,800 Enterprise License** if you proceed — making the
+  trial effectively free for committed customers.
+
+📩 To request a private trial or discuss your deployment: **info@evoptt.com**
+
+---
+
+## Why teams pick EVO PTT
+
+- **Superior voice compression** — see the [data-consumption benchmark vs. competitors](https://www.dropbox.com/s/39qpqhx88bqj5nl/EVO%20PTT%20Benchmark.pdf?dl=0).
+- **Hardware PTT button support** out of the box on F22 / F22+ / F25 devices.
+- **Per-company Docker isolation** — strict tenant separation by design.
+- **Real-time location** on dispatcher map and teammate apps.
+- **Private deployment options** — your premises, your cloud, or our AWS infrastructure.
+- **No vendor lock-in path** — buy the source and rebrand if you ever want to.
+- **Network-resilient** — auto-reconnect, network-type switching (Data ↔ WiFi without dropping), works on 2G/EDGE through 5G.
+- **Background & screen-off operation**, start-on-boot, auto-login — built for the realities of fieldwork.
+
+---
+
+## Screenshots
+
+### Android app
+<p>
+  <img src="https://play-lh.googleusercontent.com/Cslsv82yPZBkKXSQAGdtVgWt3A_bPlufh96eLG3GpEdDKFAXru0ouNvVuQ4IgMy89hoi=w720-h380-rw" alt="Login Screen">
+  <img src="https://play-lh.googleusercontent.com/DT87zUtjqABcRVc6QOhFyZGDQuahWbQ208wOytS7ZsIMjvkkISURclIHLrNCPVG3Qg=w720-h380-rw" alt="Server Screen">
+  <img src="https://play-lh.googleusercontent.com/5NeEB5Nhk3y6W-zaNyNHrC_RcNXQxr467ZjuX0jzajno5gXb0-g2UGXuiK9SunxkKJ0=w720-h380-rw" alt="Chat Screen">
+  <img src="https://play-lh.googleusercontent.com/gy2OL0GOau1zLrV7mMqNfJgz9dAv1KOTXNLF65VagdyFJe3uoOcjpz7fb5extm0LZ0E=w720-h380-rw" alt="Map View">
+</p>
+
+### Web dashboard
+<p>
+  <img src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/webpanel1.png" width="400" alt="Login">
+  <img src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/webpanel2.png" width="400" alt="Server status">
+  <img src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/webpanel3.png" width="400" alt="Companies">
+  <img src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/webpanel4.png" width="400" alt="Managers">
+  <img src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/webpanel5.png" width="400" alt="Users">
+  <img src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/webpanel6.png" width="400" alt="User location">
+</p>
+
+---
+
+## Get the Android app
+
+<p>
+  <a href="https://play.google.com/store/apps/details?id=com.theofilos.chamalis.evoptt">
+    <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png">
+  </a>
+  &nbsp;
+  <img alt="Available on Samsung Galaxy Store" src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/samsung.png" height="45">
+  &nbsp;
+  <img alt="Explore it on Huawei AppGallery" src="https://github.com/Theofilos-Chamalis/QR-PTT-PushToTalk/blob/master/githubResources/huawei.png" height="45">
+</p>
+
+Also available on **Samsung Galaxy Store** and **Huawei AppGallery**.
+
+---
+
+## Talk to us
+
+- 🌐 Website: **https://evoptt.com**
+- 📩 Sales & private trials: **info@evoptt.com**
+- 📄 Benchmark vs. competitors: [EVO PTT Benchmark (PDF)](https://www.dropbox.com/s/39qpqhx88bqj5nl/EVO%20PTT%20Benchmark.pdf?dl=0)
+
+> EVO PTT is a commercial product. This repository showcases its features, screenshots
+> and documentation. Source code access is included with the Enterprise License.
+
+<sub>Any communication through the public demo channel is shared and visible to other evaluators — please don't put sensitive information in it.</sub>
