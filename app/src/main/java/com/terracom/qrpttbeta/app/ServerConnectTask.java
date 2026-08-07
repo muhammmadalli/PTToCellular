@@ -7,8 +7,8 @@ import android.media.AudioManager;
 import android.media.MediaRecorder;
 import android.os.AsyncTask;
 
-import com.terracom.jumble.JumbleService;
-import com.terracom.jumble.model.Server;
+import com.morlunk.jumble.JumbleService;
+import com.morlunk.jumble.model.Server;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.Settings;
 import com.terracom.qrpttbeta.db.QRPushToTalkDatabase;

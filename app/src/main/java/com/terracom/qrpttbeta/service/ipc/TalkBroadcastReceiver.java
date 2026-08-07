@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.RemoteException;
 
-import com.terracom.jumble.IJumbleService;
+import com.morlunk.jumble.IJumbleService;
 
 public class TalkBroadcastReceiver extends BroadcastReceiver {
     public static final String BROADCAST_TALK = "com.terracom.qrpttbeta.action.TALK";

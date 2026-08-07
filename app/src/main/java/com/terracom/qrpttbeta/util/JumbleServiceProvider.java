@@ -1,6 +1,6 @@
 package com.terracom.qrpttbeta.util;
 
-import com.terracom.jumble.IJumbleService;
+import com.morlunk.jumble.IJumbleService;
 
 public interface JumbleServiceProvider {
     public IJumbleService getService();

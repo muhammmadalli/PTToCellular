@@ -1,6 +1,6 @@
 package com.terracom.qrpttbeta.db;
 
-import com.terracom.jumble.model.Server;
+import com.morlunk.jumble.model.Server;
 
 import java.util.List;
 

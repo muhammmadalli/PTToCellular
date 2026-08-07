@@ -2,8 +2,8 @@ package com.terracom.qrpttbeta.util;
 
 import android.os.RemoteException;
 
-import com.terracom.jumble.IJumbleService;
-import com.terracom.jumble.model.Channel;
+import com.morlunk.jumble.IJumbleService;
+import com.morlunk.jumble.model.Channel;
 
 import java.util.LinkedList;
 import java.util.List;

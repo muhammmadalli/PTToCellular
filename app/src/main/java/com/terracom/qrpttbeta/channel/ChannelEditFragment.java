@@ -12,8 +12,8 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.terracom.jumble.model.Channel;
-import com.terracom.jumble.net.Permissions;
+import com.morlunk.jumble.model.Channel;
+import com.morlunk.jumble.net.Permissions;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.util.JumbleServiceProvider;
 

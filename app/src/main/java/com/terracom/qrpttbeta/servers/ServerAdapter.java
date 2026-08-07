@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.terracom.jumble.model.Server;
+import com.morlunk.jumble.model.Server;
 import com.terracom.qrpttbeta.R;
 
 import java.util.List;
