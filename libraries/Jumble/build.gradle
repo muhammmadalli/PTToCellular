@@ -39,7 +39,7 @@ android {
     defaultConfig {
         testApplicationId "com.morlunk.jumble.test"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
-        minSdkVersion 14
+        minSdkVersion 26
         targetSdkVersion 35
     }
 
