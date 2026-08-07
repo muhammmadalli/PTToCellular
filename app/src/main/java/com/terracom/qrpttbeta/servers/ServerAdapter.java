@@ -2,7 +2,7 @@ package com.terracom.qrpttbeta.servers;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.v7.widget.PopupMenu;
+import androidx.appcompat.widget.PopupMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;

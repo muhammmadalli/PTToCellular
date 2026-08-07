@@ -1,6 +1,6 @@
 package com.terracom.qrpttbeta.channel.actionmode;
 
-import android.support.v7.view.ActionMode;
+import androidx.appcompat.view.ActionMode;
 import android.view.Menu;
 
 import com.terracom.qrpttbeta.channel.ChatTargetProvider;
