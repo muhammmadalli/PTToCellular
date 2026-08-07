@@ -18,7 +18,7 @@ if (signingFile.exists()) apply from: 'signing.gradle'
 
 android {
     namespace "com.terracom.qrpttbeta"
-    compileSdkVersion 35
+    compileSdkVersion 37
     buildToolsVersion "36.0.0"
 
     buildFeatures {
