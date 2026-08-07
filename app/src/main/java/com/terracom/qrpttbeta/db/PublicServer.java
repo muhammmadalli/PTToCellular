@@ -1,7 +1,7 @@
 package com.terracom.qrpttbeta.db;
 
 
-import com.morlunk.jumble.model.Server;
+import com.terracom.jumble.model.Server;
 
 public class PublicServer extends Server {
 

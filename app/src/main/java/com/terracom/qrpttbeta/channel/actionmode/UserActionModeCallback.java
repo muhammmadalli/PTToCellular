@@ -12,10 +12,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 
-import com.morlunk.jumble.IJumbleService;
-import com.morlunk.jumble.model.Channel;
-import com.morlunk.jumble.model.User;
-import com.morlunk.jumble.net.Permissions;
+import com.terracom.jumble.IJumbleService;
+import com.terracom.jumble.model.Channel;
+import com.terracom.jumble.model.User;
+import com.terracom.jumble.net.Permissions;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.channel.ChatTargetProvider;
 import com.terracom.qrpttbeta.channel.comment.UserCommentFragment;

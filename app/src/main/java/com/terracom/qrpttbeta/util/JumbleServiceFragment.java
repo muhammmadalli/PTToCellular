@@ -6,8 +6,8 @@ import android.os.RemoteException;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 
-import com.morlunk.jumble.IJumbleObserver;
-import com.morlunk.jumble.IJumbleService;
+import com.terracom.jumble.IJumbleObserver;
+import com.terracom.jumble.IJumbleService;
 
 public abstract class JumbleServiceFragment extends Fragment {
 

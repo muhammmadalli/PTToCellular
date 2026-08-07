@@ -1,7 +1,7 @@
 package com.terracom.qrpttbeta.channel;
 
-import com.morlunk.jumble.model.Channel;
-import com.morlunk.jumble.model.User;
+import com.terracom.jumble.model.Channel;
+import com.terracom.jumble.model.User;
 
 public interface ChatTargetProvider {
 

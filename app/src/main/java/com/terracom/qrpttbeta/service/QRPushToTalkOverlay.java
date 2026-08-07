@@ -11,9 +11,9 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.morlunk.jumble.model.Channel;
-import com.morlunk.jumble.model.User;
-import com.morlunk.jumble.util.JumbleObserver;
+import com.terracom.jumble.model.Channel;
+import com.terracom.jumble.model.User;
+import com.terracom.jumble.util.JumbleObserver;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.Settings;
 import com.terracom.qrpttbeta.channel.ChannelAdapter;

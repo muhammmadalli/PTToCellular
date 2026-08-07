@@ -11,12 +11,12 @@ import android.os.RemoteException;
 import android.preference.PreferenceManager;
 import android.speech.tts.TextToSpeech;
 
-import com.morlunk.jumble.Constants;
-import com.morlunk.jumble.JumbleService;
-import com.morlunk.jumble.model.Message;
-import com.morlunk.jumble.model.User;
-import com.morlunk.jumble.util.JumbleException;
-import com.morlunk.jumble.util.JumbleObserver;
+import com.terracom.jumble.Constants;
+import com.terracom.jumble.JumbleService;
+import com.terracom.jumble.model.Message;
+import com.terracom.jumble.model.User;
+import com.terracom.jumble.util.JumbleException;
+import com.terracom.jumble.util.JumbleObserver;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.Settings;
 import com.terracom.qrpttbeta.service.ipc.TalkBroadcastReceiver;

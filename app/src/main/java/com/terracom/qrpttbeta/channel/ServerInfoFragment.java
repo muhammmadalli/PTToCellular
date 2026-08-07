@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.morlunk.jumble.IJumbleService;
-import com.morlunk.jumble.JumbleService;
-import com.morlunk.jumble.net.JumbleUDPMessageType;
+import com.terracom.jumble.IJumbleService;
+import com.terracom.jumble.JumbleService;
+import com.terracom.jumble.net.JumbleUDPMessageType;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.util.JumbleServiceFragment;
 

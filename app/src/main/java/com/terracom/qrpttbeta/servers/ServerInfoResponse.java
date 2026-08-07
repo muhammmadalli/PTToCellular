@@ -1,6 +1,6 @@
 package com.terracom.qrpttbeta.servers;
 
-import com.morlunk.jumble.model.Server;
+import com.terracom.jumble.model.Server;
 
 import java.nio.ByteBuffer;
 

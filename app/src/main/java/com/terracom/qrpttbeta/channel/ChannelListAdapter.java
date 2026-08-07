@@ -17,9 +17,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.morlunk.jumble.IJumbleService;
-import com.morlunk.jumble.model.Channel;
-import com.morlunk.jumble.model.User;
+import com.terracom.jumble.IJumbleService;
+import com.terracom.jumble.model.Channel;
+import com.terracom.jumble.model.User;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.app.QRPushToTalkActivity;
 import com.terracom.qrpttbeta.db.QRPushToTalkDatabase;

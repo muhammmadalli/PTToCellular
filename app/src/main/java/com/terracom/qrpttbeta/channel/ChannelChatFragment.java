@@ -25,12 +25,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
-import com.morlunk.jumble.IJumbleObserver;
-import com.morlunk.jumble.IJumbleService;
-import com.morlunk.jumble.model.Channel;
-import com.morlunk.jumble.model.Message;
-import com.morlunk.jumble.model.User;
-import com.morlunk.jumble.util.JumbleObserver;
+import com.terracom.jumble.IJumbleObserver;
+import com.terracom.jumble.IJumbleService;
+import com.terracom.jumble.model.Channel;
+import com.terracom.jumble.model.Message;
+import com.terracom.jumble.model.User;
+import com.terracom.jumble.util.JumbleObserver;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.util.JumbleServiceFragment;
 import com.terracom.qrpttbeta.util.MumbleImageGetter;

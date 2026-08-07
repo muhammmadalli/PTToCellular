@@ -12,8 +12,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.morlunk.jumble.Constants;
-import com.morlunk.jumble.model.Server;
+import com.terracom.jumble.Constants;
+import com.terracom.jumble.model.Server;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.db.DatabaseProvider;
 
