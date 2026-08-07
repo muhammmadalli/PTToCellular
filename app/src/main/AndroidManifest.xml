@@ -7,14 +7,23 @@
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />   -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <!-- <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" /> -->
+    <!-- <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" /> -->
+ <!-- old <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />  -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <!-- Required for Android 9 (API 28) and above -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Required for Android 14 (API 34) and above for audio/VoIP apps -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+
 
 
     <application
@@ -56,6 +65,8 @@
 
         <service
             android:name="com.terracom.qrpttbeta.service.QRPushToTalkService"
+            android:foregroundServiceType="microphone|connectedDevice"
+            android:exported="false"
             android:enabled="true" />
 
         <activity
