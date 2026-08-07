@@ -16,8 +16,8 @@ def signingFile = file 'signing.gradle';
 if (signingFile.exists()) apply from: 'signing.gradle'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 35
+    buildToolsVersion "36.0.0"
 
     defaultConfig {
         minSdkVersion 14
