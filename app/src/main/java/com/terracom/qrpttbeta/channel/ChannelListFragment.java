@@ -8,7 +8,7 @@ import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.support.v4.view.MenuItemCompat;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.ActionMode;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -329,7 +329,7 @@ public class ChannelListFragment extends JumbleServiceFragment implements UserAc
                     mActionMode = null;
                 }
             };
-            mActionMode = ((ActionBarActivity) getActivity()).startSupportActionMode(cb);
+            mActionMode = ((AppCompatActivity) getActivity()).startSupportActionMode(cb);
         }
     }
 
@@ -347,7 +347,7 @@ public class ChannelListFragment extends JumbleServiceFragment implements UserAc
                     mActionMode = null;
                 }
             };
-            mActionMode = ((ActionBarActivity) getActivity()).startSupportActionMode(cb);
+            mActionMode = ((AppCompatActivity) getActivity()).startSupportActionMode(cb);
         }
     }
 }

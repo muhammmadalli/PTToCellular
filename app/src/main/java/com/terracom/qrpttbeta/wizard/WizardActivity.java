@@ -24,7 +24,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -35,7 +35,7 @@ import com.terracom.qrpttbeta.Settings;
  * A simple activity_wizard providing an easy to use interface for configuring useful settings.
  * Created by andrew on 01/11/13.
  */
-public class WizardActivity extends ActionBarActivity implements WizardNavigation {
+public class WizardActivity extends AppCompatActivity implements WizardNavigation {
     private Settings mSettings;
     private ViewPager mViewPager;
     private WizardPagerAdapter mPagerAdapter;
