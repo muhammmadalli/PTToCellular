@@ -3,7 +3,7 @@ package com.terracom.qrpttbeta.servers;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.terracom.jumble.model.Server;
+import com.morlunk.jumble.model.Server;
 import com.terracom.qrpttbeta.Constants;
 
 import java.net.DatagramPacket;

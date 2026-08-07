@@ -3,7 +3,7 @@ package com.terracom.qrpttbeta.servers;
 import android.content.Context;
 import android.view.MenuItem;
 
-import com.terracom.jumble.model.Server;
+import com.morlunk.jumble.model.Server;
 import com.terracom.qrpttbeta.R;
 
 import java.util.List;

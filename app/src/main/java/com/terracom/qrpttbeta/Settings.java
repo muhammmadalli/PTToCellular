@@ -6,7 +6,7 @@ import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
 import android.view.Gravity;
 
-import com.terracom.jumble.Constants;
+import com.morlunk.jumble.Constants;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.terracom.jumble.model.Server;
+import com.morlunk.jumble.model.Server;
 import com.terracom.qrpttbeta.Constants;
 
 import java.util.ArrayList;

@@ -20,9 +20,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.terracom.jumble.IJumbleObserver;
-import com.terracom.jumble.model.User;
-import com.terracom.jumble.util.JumbleObserver;
+import com.morlunk.jumble.IJumbleObserver;
+import com.morlunk.jumble.model.User;
+import com.morlunk.jumble.util.JumbleObserver;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.Settings;
 import com.terracom.qrpttbeta.util.JumbleServiceFragment;

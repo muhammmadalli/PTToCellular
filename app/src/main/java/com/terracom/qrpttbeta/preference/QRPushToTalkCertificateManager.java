@@ -2,7 +2,7 @@ package com.terracom.qrpttbeta.preference;
 
 import android.os.Environment;
 
-import com.terracom.jumble.net.JumbleCertificateGenerator;
+import com.morlunk.jumble.net.JumbleCertificateGenerator;
 
 import org.spongycastle.operator.OperatorCreationException;
 

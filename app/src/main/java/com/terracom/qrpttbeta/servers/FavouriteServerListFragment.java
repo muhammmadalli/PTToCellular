@@ -15,7 +15,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
-import com.terracom.jumble.model.Server;
+import com.morlunk.jumble.model.Server;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.db.DatabaseProvider;
 import com.terracom.qrpttbeta.db.PublicServer;

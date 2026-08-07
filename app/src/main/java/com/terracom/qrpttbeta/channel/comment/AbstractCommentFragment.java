@@ -13,7 +13,7 @@ import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.TabHost;
 
-import com.terracom.jumble.IJumbleService;
+import com.morlunk.jumble.IJumbleService;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.util.JumbleServiceProvider;
 

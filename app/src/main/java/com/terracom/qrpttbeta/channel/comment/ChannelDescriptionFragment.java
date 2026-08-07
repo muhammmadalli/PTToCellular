@@ -2,9 +2,9 @@ package com.terracom.qrpttbeta.channel.comment;
 
 import android.os.RemoteException;
 
-import com.terracom.jumble.IJumbleService;
-import com.terracom.jumble.model.Channel;
-import com.terracom.jumble.util.JumbleObserver;
+import com.morlunk.jumble.IJumbleService;
+import com.morlunk.jumble.model.Channel;
+import com.morlunk.jumble.util.JumbleObserver;
 
 public class ChannelDescriptionFragment extends AbstractCommentFragment {
 
