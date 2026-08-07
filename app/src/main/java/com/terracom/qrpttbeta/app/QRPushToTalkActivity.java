@@ -138,7 +138,18 @@ public class QRPushToTalkActivity extends AppCompatActivity implements ListView.
         }
 
         @Override
-        public void onDisconnected(JumbleException e) throws RemoteException {
+        public void onDisconnected() throws RemoteException {
+            if (getSupportFragmentManager().findFragmentById(R.id.content_frame) instanceof JumbleServiceFragment) {
+                loadDrawerFragment(DrawerAdapter.ITEM_FAVOURITES);
+            }
+            mDrawerAdapter.notifyDataSetChanged();
+            supportInvalidateOptionsMenu();
+
+            updateConnectionState(getService());
+        }
+
+        @Override
+        public void onConnectionError(String message, boolean reconnecting) throws RemoteException {
             if (getSupportFragmentManager().findFragmentById(R.id.content_frame) instanceof JumbleServiceFragment) {
                 loadDrawerFragment(DrawerAdapter.ITEM_FAVOURITES);
             }
@@ -367,14 +378,14 @@ public class QRPushToTalkActivity extends AppCompatActivity implements ListView.
         if (mDrawerToggle.onOptionsItemSelected(item))
             return true;
 
-        switch (item.getItemId()) {
-            case R.id.action_disconnect:
-                try {
-                    getService().disconnect();
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-                return true;
+        int itemId = item.getItemId();
+        if (itemId == R.id.action_disconnect) {
+            try {
+                getService().disconnect();
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+            return true;
         }
 
         return false;
@@ -543,7 +554,13 @@ public class QRPushToTalkActivity extends AppCompatActivity implements ListView.
                     try {
                         mService.registerObserver(new JumbleObserver() {
                             @Override
-                            public void onDisconnected(JumbleException e) throws RemoteException {
+                            public void onDisconnected() throws RemoteException {
+                                connectToServer(server);
+                                mService.unregisterObserver(this);
+                            }
+
+                            @Override
+                            public void onConnectionError(String message, boolean reconnecting) throws RemoteException {
                                 connectToServer(server);
                                 mService.unregisterObserver(this);
                             }

@@ -30,6 +30,11 @@ import com.morlunk.jumble.model.User;
  */
 public class JumbleObserver extends IJumbleObserver.Stub {
     @Override
+    public void onConnecting() throws RemoteException {
+
+    }
+
+    @Override
     public void onConnected() throws RemoteException {
 
     }

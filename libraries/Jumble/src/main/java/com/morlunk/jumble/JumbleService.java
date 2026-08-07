@@ -95,6 +95,11 @@ public class JumbleService extends Service implements JumbleConnection.JumbleCon
 
     public static final String ACTION_DISCONNECT = "com.morlunk.jumble.DISCONNECT";
 
+    public static final int STATE_DISCONNECTED = 0;
+    public static final int STATE_CONNECTING = 1;
+    public static final int STATE_CONNECTED = 2;
+    public static final int STATE_CONNECTION_LOST = 3;
+
     // Service settings
     private Server mServer;
     private boolean mAutoReconnect;
@@ -133,6 +138,7 @@ public class JumbleService extends Service implements JumbleConnection.JumbleCon
 
     private List<Message> mMessageLog;
     private boolean mReconnecting;
+    private JumbleException mLastError;
 
     private AudioInput.AudioInputListener mAudioInputListener = new AudioInput.AudioInputListener() {
         @Override
@@ -243,6 +249,12 @@ public class JumbleService extends Service implements JumbleConnection.JumbleCon
 
     public void connect() {
         try {
+            try {
+                mCallbacks.onConnecting();
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+            mLastError = null;
             mReconnecting = false;
 
             mConnection = new JumbleConnection(this);
@@ -291,6 +303,17 @@ public class JumbleService extends Service implements JumbleConnection.JumbleCon
 
     public boolean isConnected() {
         return mConnection != null && mConnection.isConnected();
+    }
+
+    public int getConnectionState() {
+        if (mReconnecting) return STATE_CONNECTION_LOST;
+        if (mConnection == null) return STATE_DISCONNECTED;
+        if (mConnection.isConnected()) return STATE_CONNECTED;
+        return STATE_CONNECTING;
+    }
+
+    public JumbleException getConnectionError() {
+        return mLastError;
     }
 
     @Override
@@ -370,6 +393,7 @@ public class JumbleService extends Service implements JumbleConnection.JumbleCon
 
     @Override
     public void onConnectionError(final JumbleException e) {
+        mLastError = e;
         Log.e(Constants.TAG, "Connection error: " + e.getMessage() + ", should reconnect: " + e.isAutoReconnectAllowed());
         mReconnecting = mAutoReconnect && e.isAutoReconnectAllowed();
         if(mReconnecting) {
@@ -432,6 +456,15 @@ public class JumbleService extends Service implements JumbleConnection.JumbleCon
         @Override
         public boolean isReconnecting() throws RemoteException {
             return mReconnecting;
+        }
+
+        @Override
+        public int getConnectionState() throws RemoteException {
+            return JumbleService.this.getConnectionState();
+        }
+
+        public JumbleException getConnectionError() {
+            return JumbleService.this.getConnectionError();
         }
 
         @Override

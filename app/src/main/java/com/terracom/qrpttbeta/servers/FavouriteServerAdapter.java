@@ -28,15 +28,15 @@ public class FavouriteServerAdapter extends ServerAdapter<Server> {
 
     @Override
     public boolean onPopupItemClick(Server server, MenuItem menuItem) {
-        switch (menuItem.getItemId()) {
-            case R.id.menu_server_edit:
-                mListener.editServer(server);
-                return true;
-            case R.id.menu_server_delete:
-                mListener.deleteServer(server);
-                return true;
-            default:
-                return false;
+        int itemId = menuItem.getItemId();
+        if (itemId == R.id.menu_server_edit) {
+            mListener.editServer(server);
+            return true;
+        } else if (itemId == R.id.menu_server_delete) {
+            mListener.deleteServer(server);
+            return true;
+        } else {
+            return false;
         }
     }
 

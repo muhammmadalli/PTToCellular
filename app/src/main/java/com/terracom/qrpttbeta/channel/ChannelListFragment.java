@@ -41,7 +41,12 @@ public class ChannelListFragment extends JumbleServiceFragment implements UserAc
 
     private IJumbleObserver mServiceObserver = new JumbleObserver() {
         @Override
-        public void onDisconnected(JumbleException e) throws RemoteException {
+        public void onDisconnected() throws RemoteException {
+            mChannelView.setAdapter(null);
+        }
+
+        @Override
+        public void onConnectionError(String message, boolean reconnecting) throws RemoteException {
             mChannelView.setAdapter(null);
         }
 
@@ -224,39 +229,37 @@ public class ChannelListFragment extends JumbleServiceFragment implements UserAc
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()) {
-            case R.id.menu_mute_button:
-                try {
-                    User self = getService().getSessionUser();
+        int itemId = item.getItemId();
+        if (itemId == R.id.menu_mute_button) {
+            try {
+                User self = getService().getSessionUser();
 
-                    boolean muted = !self.isSelfMuted();
-                    boolean deafened = self.isSelfDeafened();
-                    deafened &= muted;
-                    self.setSelfMuted(muted);
-                    self.setSelfDeafened(deafened);
-                    getService().setSelfMuteDeafState(self.isSelfMuted(), self.isSelfDeafened());
+                boolean muted = !self.isSelfMuted();
+                boolean deafened = self.isSelfDeafened();
+                deafened &= muted;
+                self.setSelfMuted(muted);
+                self.setSelfDeafened(deafened);
+                getService().setSelfMuteDeafState(self.isSelfMuted(), self.isSelfDeafened());
 
-                    getActivity().supportInvalidateOptionsMenu();
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-                return true;
-            case R.id.menu_deafen_button:
-                try {
-                    User self = getService().getSessionUser();
+                getActivity().supportInvalidateOptionsMenu();
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+            return true;
+        } else if (itemId == R.id.menu_deafen_button) {
+            try {
+                User self = getService().getSessionUser();
 
-                    boolean deafened = self.isSelfDeafened();
-                    self.setSelfDeafened(!deafened);
-                    self.setSelfMuted(!deafened);
-                    getService().setSelfMuteDeafState(self.isSelfDeafened(), self.isSelfDeafened());
+                boolean deafened = self.isSelfDeafened();
+                self.setSelfDeafened(!deafened);
+                self.setSelfMuted(!deafened);
+                getService().setSelfMuteDeafState(self.isSelfDeafened(), self.isSelfDeafened());
 
-                    getActivity().supportInvalidateOptionsMenu();
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-                return true;
-            /*case R.id.menu_search:
-                return false;*/
+                getActivity().supportInvalidateOptionsMenu();
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+            return true;
         }
 
         return super.onOptionsItemSelected(item);

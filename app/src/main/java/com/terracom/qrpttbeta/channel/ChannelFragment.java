@@ -71,7 +71,8 @@ public class ChannelFragment extends JumbleServiceFragment implements SharedPref
         mViewPager = (ViewPager) view.findViewById(R.id.channel_view_pager);
         mTabStrip = (PagerTabStrip) view.findViewById(R.id.channel_tab_strip);
         if (mTabStrip != null) {
-            int[] attrs = new int[]{R.attr.colorPrimary, android.R.attr.textColorPrimaryInverse};
+            int colorPrimaryAttr = getResources().getIdentifier("colorPrimary", "attr", getActivity().getPackageName());
+            int[] attrs = new int[]{colorPrimaryAttr, android.R.attr.textColorPrimaryInverse};
             TypedArray a = getActivity().obtainStyledAttributes(attrs);
             int titleStripBackground = a.getColor(0, -1);
             int titleStripColor = a.getColor(1, -1);
@@ -145,16 +146,16 @@ public class ChannelFragment extends JumbleServiceFragment implements SharedPref
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Settings settings = Settings.getInstance(getActivity());
-        switch (item.getItemId()) {
-            case R.id.menu_input_voice:
-                settings.setInputMethod(Settings.ARRAY_INPUT_METHOD_VOICE);
-                return true;
-            case R.id.menu_input_ptt:
-                settings.setInputMethod(Settings.ARRAY_INPUT_METHOD_PTT);
-                return true;
-            case R.id.menu_input_continuous:
-                settings.setInputMethod(Settings.ARRAY_INPUT_METHOD_CONTINUOUS);
-                return true;
+        int itemId = item.getItemId();
+        if (itemId == R.id.menu_input_voice) {
+            settings.setInputMethod(Settings.ARRAY_INPUT_METHOD_VOICE);
+            return true;
+        } else if (itemId == R.id.menu_input_ptt) {
+            settings.setInputMethod(Settings.ARRAY_INPUT_METHOD_PTT);
+            return true;
+        } else if (itemId == R.id.menu_input_continuous) {
+            settings.setInputMethod(Settings.ARRAY_INPUT_METHOD_CONTINUOUS);
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

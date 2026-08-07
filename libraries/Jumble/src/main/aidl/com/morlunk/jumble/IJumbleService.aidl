@@ -39,6 +39,7 @@ interface IJumbleService {
     long getUDPLatency();
     int getMaxBandwidth();
     int getCurrentBandwidth();
+    int getConnectionState();
 
     // Server information
     int getServerVersion();

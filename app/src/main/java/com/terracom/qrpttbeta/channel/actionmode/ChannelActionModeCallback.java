@@ -85,51 +85,46 @@ public class ChannelActionModeCallback extends ChatTargetActionModeCallback {
     @Override
     public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {
         boolean adding = false;
-        switch (menuItem.getItemId()) {
-            case R.id.context_channel_join:
-                try {
-                    mService.joinChannel(mChannel.getId());
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-                break;
-            case R.id.context_channel_add:
-                adding = true;
-            case R.id.context_channel_edit:
-                ChannelEditFragment addFragment = new ChannelEditFragment();
-                Bundle args = new Bundle();
-                if (adding) args.putInt("parent", mChannel.getId());
-                else args.putInt("channel", mChannel.getId());
-                args.putBoolean("adding", adding);
-                addFragment.setArguments(args);
-                addFragment.show(mFragmentManager, "ChannelAdd");
-                break;
-            case R.id.context_channel_remove:
-                AlertDialog.Builder adb = new AlertDialog.Builder(mContext);
-                adb.setTitle(R.string.confirm);
-                adb.setMessage(R.string.confirm_delete_channel);
-                adb.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        try {
-                            mService.removeChannel(mChannel.getId());
-                        } catch (RemoteException e) {
-                            e.printStackTrace();
-                        }
+        int itemId = menuItem.getItemId();
+        if (itemId == R.id.context_channel_join) {
+            try {
+                mService.joinChannel(mChannel.getId());
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        } else if (itemId == R.id.context_channel_add || itemId == R.id.context_channel_edit) {
+            adding = itemId == R.id.context_channel_add;
+            ChannelEditFragment addFragment = new ChannelEditFragment();
+            Bundle args = new Bundle();
+            if (adding) args.putInt("parent", mChannel.getId());
+            else args.putInt("channel", mChannel.getId());
+            args.putBoolean("adding", adding);
+            addFragment.setArguments(args);
+            addFragment.show(mFragmentManager, "ChannelAdd");
+        } else if (itemId == R.id.context_channel_remove) {
+            AlertDialog.Builder adb = new AlertDialog.Builder(mContext);
+            adb.setTitle(R.string.confirm);
+            adb.setMessage(R.string.confirm_delete_channel);
+            adb.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    try {
+                        mService.removeChannel(mChannel.getId());
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
                     }
-                });
-                adb.setNegativeButton(android.R.string.cancel, null);
-                adb.show();
-                break;
-            case R.id.context_channel_view_description:
-                Bundle commentArgs = new Bundle();
-                commentArgs.putInt("channel", mChannel.getId());
-                commentArgs.putString("comment", mChannel.getDescription());
-                commentArgs.putBoolean("editing", false);
-                DialogFragment commentFragment = (DialogFragment) Fragment.instantiate(mContext,
-                        ChannelDescriptionFragment.class.getName(), commentArgs);
-                commentFragment.show(mFragmentManager, ChannelDescriptionFragment.class.getName());
-                break;
+                }
+            });
+            adb.setNegativeButton(android.R.string.cancel, null);
+            adb.show();
+        } else if (itemId == R.id.context_channel_view_description) {
+            Bundle commentArgs = new Bundle();
+            commentArgs.putInt("channel", mChannel.getId());
+            commentArgs.putString("comment", mChannel.getDescription());
+            commentArgs.putBoolean("editing", false);
+            DialogFragment commentFragment = (DialogFragment) Fragment.instantiate(mContext,
+                    ChannelDescriptionFragment.class.getName(), commentArgs);
+            commentFragment.show(mFragmentManager, ChannelDescriptionFragment.class.getName());
         }
         actionMode.finish();
         return true;

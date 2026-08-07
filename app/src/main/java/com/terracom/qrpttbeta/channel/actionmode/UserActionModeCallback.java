@@ -117,74 +117,62 @@ public class UserActionModeCallback extends ChatTargetActionModeCallback {
     public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {
         try {
             boolean ban = false;
-            switch (menuItem.getItemId()) {
-                case R.id.context_ban:
-                    ban = true;
-                case R.id.context_kick:
-                    AlertDialog.Builder alertBuilder = new AlertDialog.Builder(mContext);
-                    alertBuilder.setTitle(R.string.user_menu_kick);
-                    final EditText reasonField = new EditText(mContext);
-                    reasonField.setHint(R.string.hint_reason);
-                    alertBuilder.setView(reasonField);
-                    final boolean finalBan = ban;
-                    alertBuilder.setPositiveButton(R.string.user_menu_kick, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            try {
-                                mService.kickBanUser(mUser.getSession(), reasonField.getText().toString(), finalBan);
-                            } catch (RemoteException e) {
-                                e.printStackTrace();
-                            }
+            int itemId = menuItem.getItemId();
+            if (itemId == R.id.context_ban || itemId == R.id.context_kick) {
+                ban = itemId == R.id.context_ban;
+                AlertDialog.Builder alertBuilder = new AlertDialog.Builder(mContext);
+                alertBuilder.setTitle(R.string.user_menu_kick);
+                final EditText reasonField = new EditText(mContext);
+                reasonField.setHint(R.string.hint_reason);
+                alertBuilder.setView(reasonField);
+                final boolean finalBan = ban;
+                alertBuilder.setPositiveButton(R.string.user_menu_kick, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        try {
+                            mService.kickBanUser(mUser.getSession(), reasonField.getText().toString(), finalBan);
+                        } catch (RemoteException e) {
+                            e.printStackTrace();
                         }
-                    });
-                    alertBuilder.setNegativeButton(android.R.string.cancel, null);
-                    alertBuilder.show();
-                    break;
-                case R.id.context_mute:
-                    mService.setMuteDeafState(mUser.getSession(), !(mUser.isMuted() || mUser.isSuppressed()), mUser.isDeafened());
-                    break;
-                case R.id.context_deafen:
-                    mService.setMuteDeafState(mUser.getSession(), mUser.isMuted(), !mUser.isDeafened());
-                    break;
-                case R.id.context_move:
-                    showChannelMoveDialog();
-                    break;
-                case R.id.context_priority:
-                    mService.setPrioritySpeaker(mUser.getSession(), !mUser.isPrioritySpeaker());
-                    break;
-                case R.id.context_local_mute:
-                    mUser.setLocalMuted(!mUser.isLocalMuted());
-                    mListener.onLocalUserStateUpdated(mUser);
-                    break;
-                case R.id.context_ignore_messages:
-                    mUser.setLocalIgnored(!mUser.isLocalIgnored());
-                    mListener.onLocalUserStateUpdated(mUser);
-                    break;
-                case R.id.context_change_comment:
-                    showUserComment(true);
-                    break;
-                case R.id.context_view_comment:
-                    showUserComment(false);
-                    break;
-                case R.id.context_reset_comment:
-                    new AlertDialog.Builder(mContext)
-                            .setMessage(mContext.getString(R.string.confirm_reset_comment, mUser.getName()))
-                            .setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    try {
-                                        mService.setUserComment(mUser.getSession(), "");
-                                    } catch (RemoteException e) {
-                                        e.printStackTrace();
-                                    }
+                    }
+                });
+                alertBuilder.setNegativeButton(android.R.string.cancel, null);
+                alertBuilder.show();
+            } else if (itemId == R.id.context_mute) {
+                mService.setMuteDeafState(mUser.getSession(), !(mUser.isMuted() || mUser.isSuppressed()), mUser.isDeafened());
+            } else if (itemId == R.id.context_deafen) {
+                mService.setMuteDeafState(mUser.getSession(), mUser.isMuted(), !mUser.isDeafened());
+            } else if (itemId == R.id.context_move) {
+                showChannelMoveDialog();
+            } else if (itemId == R.id.context_priority) {
+                mService.setPrioritySpeaker(mUser.getSession(), !mUser.isPrioritySpeaker());
+            } else if (itemId == R.id.context_local_mute) {
+                mUser.setLocalMuted(!mUser.isLocalMuted());
+                mListener.onLocalUserStateUpdated(mUser);
+            } else if (itemId == R.id.context_ignore_messages) {
+                mUser.setLocalIgnored(!mUser.isLocalIgnored());
+                mListener.onLocalUserStateUpdated(mUser);
+            } else if (itemId == R.id.context_change_comment) {
+                showUserComment(true);
+            } else if (itemId == R.id.context_view_comment) {
+                showUserComment(false);
+            } else if (itemId == R.id.context_reset_comment) {
+                new AlertDialog.Builder(mContext)
+                        .setMessage(mContext.getString(R.string.confirm_reset_comment, mUser.getName()))
+                        .setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                try {
+                                    mService.setUserComment(mUser.getSession(), "");
+                                } catch (RemoteException e) {
+                                    e.printStackTrace();
                                 }
-                            })
-                            .setNegativeButton(android.R.string.cancel, null)
-                            .show();
-                    break;
-                case R.id.context_register:
-                    mService.registerUser(mUser.getSession());
-                    break;
+                            }
+                        })
+                        .setNegativeButton(android.R.string.cancel, null)
+                        .show();
+            } else if (itemId == R.id.context_register) {
+                mService.registerUser(mUser.getSession());
             }
         } catch (RemoteException e) {
             e.printStackTrace();

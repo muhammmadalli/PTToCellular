@@ -100,15 +100,23 @@ public class QRPushToTalkService extends JumbleService implements
         }
 
         @Override
-        public void onDisconnected(JumbleException e) throws RemoteException {
+        public void onDisconnected() throws RemoteException {
             if (mNotification != null) {
                 mNotification.hide();
                 mNotification = null;
             }
-            if (e != null) {
+        }
+
+        @Override
+        public void onConnectionError(String message, boolean reconnecting) throws RemoteException {
+            if (mNotification != null) {
+                mNotification.hide();
+                mNotification = null;
+            }
+            if (message != null) {
                 mReconnectNotification =
-                        QRPushToTalkReconnectNotification.show(QRPushToTalkService.this, e.getMessage(),
-                                getBinder().isReconnecting(),
+                        QRPushToTalkReconnectNotification.show(QRPushToTalkService.this, message,
+                                reconnecting,
                                 QRPushToTalkService.this);
             }
         }
@@ -269,8 +277,23 @@ public class QRPushToTalkService extends JumbleService implements
     }
 
     @Override
-    public void onConnectionDisconnected(JumbleException e) {
-        super.onConnectionDisconnected(e);
+    public void onConnectionDisconnected() {
+        super.onConnectionDisconnected();
+        try {
+            unregisterReceiver(mTalkReceiver);
+        } catch (IllegalArgumentException iae) {
+        }
+
+        mChannelOverlay.hide();
+
+        mHotCorner.setShown(false);
+
+        setProximitySensorOn(false);
+    }
+
+    @Override
+    public void onConnectionError(JumbleException e) {
+        super.onConnectionError(e);
         try {
             unregisterReceiver(mTalkReceiver);
         } catch (IllegalArgumentException iae) {

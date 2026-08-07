@@ -16,13 +16,15 @@ public class TintedMenuInflater {
 
     public TintedMenuInflater(Context context, MenuInflater inflater) {
         mInflater = inflater;
+        int actionBarStyleAttr = context.getResources().getIdentifier("actionBarStyle", "attr", context.getPackageName());
         TypedArray actionBarThemeArray =
-                context.obtainStyledAttributes(new int[]{R.attr.actionBarStyle});
+                context.obtainStyledAttributes(new int[]{actionBarStyleAttr});
         int actionBarTheme = actionBarThemeArray.getResourceId(0, 0);
         actionBarThemeArray.recycle();
 
+        int titleTextStyleAttr = context.getResources().getIdentifier("titleTextStyle", "attr", context.getPackageName());
         TypedArray titleTextStyleArray =
-                context.obtainStyledAttributes(actionBarTheme, new int[]{R.attr.titleTextStyle});
+                context.obtainStyledAttributes(actionBarTheme, new int[]{titleTextStyleAttr});
         int titleTextStyle = titleTextStyleArray.getResourceId(0, 0);
         titleTextStyleArray.recycle();
 

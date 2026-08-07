@@ -158,10 +158,9 @@ public class ChannelChatFragment extends JumbleServiceFragment implements ChatTa
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_clear_chat:
-                clear();
-                return true;
+        if (item.getItemId() == R.id.menu_clear_chat) {
+            clear();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
