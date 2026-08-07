@@ -35,18 +35,23 @@ android {
         buildConfigField "boolean", "DONATE_NAG", "false"
     }
 
+    flavorDimensions "default"
+
     productFlavors {
 
         official {
+            dimension "default"
             applicationId "com.terracom.qrptt"
         }
 
         free {
+            dimension "default"
             applicationId "com.theofilos.chamalis.qrptt.free"
             buildConfigField "boolean", "DONATE_NAG", "false"
         }
 
         jenkins {
+            dimension "default"
             def env = System.getenv()
             if (env.containsKey("BUILD_NUMBER") && env.containsKey("BUILD_DISPLAY_NAME")) {
                 versionCode Integer.parseInt(env.get("BUILD_NUMBER"))
