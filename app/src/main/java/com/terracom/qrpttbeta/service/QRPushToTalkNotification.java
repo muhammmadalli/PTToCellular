@@ -7,6 +7,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.ServiceInfo;
+
 import androidx.core.app.NotificationCompat;
 
 import com.terracom.qrpttbeta.R;
@@ -115,15 +117,23 @@ public class QRPushToTalkNotification {
         builder.setPriority(NotificationCompat.PRIORITY_HIGH);
         builder.setOngoing(true);
 
+        // Define the base flags and append FLAG_IMMUTABLE if running on Android 6.0 (API 23) or higher
+        int pendingIntentFlags = PendingIntent.FLAG_CANCEL_CURRENT;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            pendingIntentFlags |= PendingIntent.FLAG_IMMUTABLE;
+        }
+
         if (mActionsShown) {
             Intent muteIntent = new Intent(BROADCAST_MUTE);
             Intent deafenIntent = new Intent(BROADCAST_DEAFEN);
+            // Fixed: Added pendingIntentFlags to action button 1
             builder.addAction(R.drawable.ic_action_microphone,
                     mService.getString(R.string.mute), PendingIntent.getBroadcast(mService, 1,
-                            muteIntent, PendingIntent.FLAG_CANCEL_CURRENT));
+                            muteIntent, pendingIntentFlags));
+            // Fixed: Added pendingIntentFlags to action button 2
             builder.addAction(R.drawable.ic_action_audio,
                     mService.getString(R.string.deafen), PendingIntent.getBroadcast(mService, 1,
-                            deafenIntent, PendingIntent.FLAG_CANCEL_CURRENT));
+                            deafenIntent, pendingIntentFlags));
         }
 
         if (mMessages.size() > 0) {
@@ -136,11 +146,17 @@ public class QRPushToTalkNotification {
 
         Intent channelListIntent = new Intent(mService, QRPushToTalkActivity.class);
         channelListIntent.putExtra(QRPushToTalkActivity.EXTRA_DRAWER_FRAGMENT, DrawerAdapter.ITEM_SERVER);
-        PendingIntent pendingIntent = PendingIntent.getActivity(mService, 0, channelListIntent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        // Fixed: Added pendingIntentFlags to the main content tap intent
+        PendingIntent pendingIntent = PendingIntent.getActivity(mService, 0, channelListIntent, pendingIntentFlags);
         builder.setContentIntent(pendingIntent);
 
         Notification notification = builder.build();
-        mService.startForeground(NOTIFICATION_ID, notification);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            mService.startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE);
+        } else {
+            mService.startForeground(NOTIFICATION_ID, notification);
+        }
         return notification;
     }
 
