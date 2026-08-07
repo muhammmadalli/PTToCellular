@@ -12,7 +12,7 @@ dependencies {
     implementation files('../libraries/gson-2.3.1.jar')
 }
 
-def signingFile = file 'signing.gradle';
+def signingFile = file 'signing.gradle'
 if (signingFile.exists()) apply from: 'signing.gradle'
 
 android {
