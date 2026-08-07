@@ -15,7 +15,7 @@ import com.morlunk.jumble.Constants;
 import com.morlunk.jumble.JumbleService;
 import com.morlunk.jumble.model.Message;
 import com.morlunk.jumble.model.User;
-import com.morlunk.jumble.util.JumbleException;
+import com.morlunk.jumble.net.JumbleException;
 import com.morlunk.jumble.util.JumbleObserver;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.Settings;

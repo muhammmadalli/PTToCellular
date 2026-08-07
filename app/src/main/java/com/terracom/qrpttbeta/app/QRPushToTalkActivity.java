@@ -33,7 +33,7 @@ import android.widget.Toast;
 import com.morlunk.jumble.IJumbleService;
 import com.morlunk.jumble.JumbleService;
 import com.morlunk.jumble.model.Server;
-import com.morlunk.jumble.util.JumbleException;
+import com.morlunk.jumble.net.JumbleException;
 import com.morlunk.jumble.util.JumbleObserver;
 import com.morlunk.jumble.util.MumbleURLParser;
 import com.morlunk.jumble.util.ParcelableByteArray;

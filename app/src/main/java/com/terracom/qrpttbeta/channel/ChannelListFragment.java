@@ -26,7 +26,7 @@ import com.morlunk.jumble.JumbleService;
 import com.morlunk.jumble.model.Channel;
 import com.morlunk.jumble.model.Server;
 import com.morlunk.jumble.model.User;
-import com.morlunk.jumble.util.JumbleException;
+import com.morlunk.jumble.net.JumbleException;
 import com.morlunk.jumble.util.JumbleObserver;
 import com.terracom.qrpttbeta.R;
 import com.terracom.qrpttbeta.channel.actionmode.ChannelActionModeCallback;
