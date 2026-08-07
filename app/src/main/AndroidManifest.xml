@@ -25,7 +25,8 @@
         <activity android:name="com.terracom.qrpttbeta.wizard.WizardActivity" />
         <activity
             android:name="com.terracom.qrpttbeta.preference.Preferences"
-            android:parentActivityName="com.terracom.qrpttbeta.app.QRPushToTalkActivity" >
+            android:parentActivityName="com.terracom.qrpttbeta.app.QRPushToTalkActivity"
+            android:exported="false" >
             <intent-filter>
                 <action android:name="com.terracom.qrpttbeta.app.PREFS_GENERAL" />
 
@@ -60,7 +61,8 @@
         <activity
             android:name="com.terracom.qrpttbeta.app.QRPushToTalkActivity"
             android:label="@string/app_name"
-            android:launchMode="singleTop" >
+            android:launchMode="singleTop"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -8,7 +8,7 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.palette:palette:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.4.0'
-    implementation 'androidx.core:core:1.19.0' // Or the latest version appropriate for your SDK
+    implementation 'androidx.core:core:1.15.0' // Or the latest version appropriate for your SDK
     implementation files('../libraries/android-async-http-1.4.6.jar')
     implementation files('../libraries/gson-2.3.1.jar')
 }
@@ -18,7 +18,7 @@ if (signingFile.exists()) apply from: 'signing.gradle'
 
 android {
     namespace "com.terracom.qrpttbeta"
-    compileSdkVersion 37
+    compileSdkVersion 35
     buildToolsVersion "36.0.0"
 
     buildFeatures {
